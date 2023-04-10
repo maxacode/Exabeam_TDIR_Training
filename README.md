@@ -12,7 +12,10 @@
 
 2. [Module 2: Threat Detection with Behavior Analytics](#threatdetection)
     1. [How User Entity Behavioral Analytics (UEBA) Works](#ueba)
+    2. [Lab](#module2lab)
+    3. [XDR](#xdr)
 
+3. [Module 3: How data Ingestion and Enrichment works in AA](#module3)
 
 33.  Search, Dashboards, and Correlation Rules - EDU-2201 
 
@@ -35,47 +38,47 @@ Purpose of the Course:
 - Out-of-the-box integration
 - Pre-tuned detection mechanisms
 
-![Day In a Life](./assets/day-in-a-life.png)
+![ LINK: Day In a Life](./assets/day-in-a-life.png)
 
 ## Lab Setup
-[Customer Login](https://customer.exabeamtraining.com/)
+[ LINK: Customer Login](https://customer.exabeamtraining.com/)
 - My Profile
 - Click on Class currently Enrolled in 
 - All Slides/Labs will be there
 
 ## Slides <a name="slides"></a> 
 
-[Day 1 Slides](./assets/Day1-2170-Student-v4.pdf)
+[ LINK: Day 1 Slides](./assets/Day1-2170-Student-v4.pdf)
 
-[Day 2 Slides](./assets/Day2-2170-Student-v4.pdf)
+[ LINK: Day 2 Slides](./assets/Day2-2170-Student-v4.pdf)
 
-[Day 3 Slides](./assets/Day3-2170-Student-v4.pdf)
+[ LINK: Day 3 Slides](./assets/Day3-2170-Student-v4.pdf)
 
 
 ## Links <a name="alllinks"></a>
 
 
-[Library - Amazing Sources - Discover more about the Exabeam platform, learn about the latest in SecOps, and find resources to help mature your SOC. Browse by content type or explore our featured picks below.](https://www.exabeam.com/library/)
+[ LINK: Library - Amazing Sources - Discover more about the Exabeam platform, learn about the latest in SecOps, and find resources to help mature your SOC. Browse by content type or explore our featured picks below.](https://www.exabeam.com/library/)
 
-[Customer Login](https://customer.exabeamtraining.com/)
+[ LINK: Customer Login](https://customer.exabeamtraining.com/)
 
-[All Documentation](https://docs.exabeam.com/)
+[ LINK: All Documentation](https://docs.exabeam.com/)
 
-[Advanced Analytics User Guide](https://docs.exabeam.com/cloud-delivered-advanced-analytics)
+[ LINK: Advanced Analytics User Guide](https://docs.exabeam.com/cloud-delivered-advanced-analytics)
 
-[Office Hours](https://community.exabeam.com/s/article/Exabeam-SaaS-Cloud-Office-Hours)
+[ LINK: Office Hours](https://community.exabeam.com/s/article/Exabeam-SaaS-Cloud-Office-Hours)
 
-[Virtual Instructor Led Training](https://customer.exabeamtraining.com/page/instructor-led-training)
+[ LINK: Virtual Instructor Led Training](https://customer.exabeamtraining.com/page/instructor-led-training)
 
-[Digital Learning](https://customer.exabeamtraining.com/page/digital-learning)
+[ LINK: Digital Learning](https://customer.exabeamtraining.com/page/digital-learning)
 
-[Exabeam CTF](https://customer.exabeamtraining.com/exabeam-capture-the-flag)
+[ LINK: Exabeam CTF](https://customer.exabeamtraining.com/exabeam-capture-the-flag)
 
-[Mitre Systems Engineering](https://www.mitre.org/our-impact/mitre-labs/systems-engineering-innovation-center)
+[ LINK: Mitre Systems Engineering](https://www.mitre.org/our-impact/mitre-labs/systems-engineering-innovation-center)
 
+[ LINK: Elimate Alert Fatigue](https://alertops.com/eliminate-alert-fatigue/)
 
-[Elimate Alert Fatigue](https://alertops.com/eliminate-alert-fatigue/)
-
+[ LINK: What is XDR](https://www.exabeam.com/information-security/what-is-xdr-transforming-threat-detection-and-response/)
 
 ## Key Takeaways <a name="keytakeaways"></a>
 
@@ -106,7 +109,7 @@ Purpose of the Course:
   - Credentials exploited by someone outside the organization for the purpose of data theft and/or sabotage
 
 
-## Threat Detection with Behavior Analytics <a name="threatdetection"></a> 
+## Module 2 Threat Detection with Behavior Analytics <a name="threatdetection"></a> 
 
 **1. Security Alerts**
 
@@ -172,6 +175,56 @@ user context, and report on suspicious behavior.
 will not be able to tell if the abnormal behavior is good or bad, only that it deviates from normal.
 - Reinforced / semi-supervised machine learning – a hybrid model where the basis is unsupervised learning, and actual alert resolutions are fed back into the system to allow fine tuning of the model and reduce the signal-tonoise ratio. 
 - Deep learning – enables virtual alert triage and investigation. The system trains on data sets representing security alerts and their triage outcomes, performs self-identification of features, and is able to predict triage outcomes for new sets of security alerts.
+
+
+### Module 2 Lab <a name="module2lab"></a>
+
+[ LINK: Lab Login](https://classroom9-aa.exalabs.io/)
+
+![ LINK: Lab Dashboard](./assets/module2-lab1.png)
+
+![ LINK: Lab Dashboard](./assets/module2-lab2.png)
+
+
+### What is XDR eXtended Detection and Response <a name="xdr"></a>
+
+- What is a native XDR?
+  - A native XDR is a closed ecosystem that offers both the front-end solutions that generate data as well as the back-end capabilities of analysis and workflow. To be a native XDR solution, a vendor should ideally offer all required sensors needed for common XDR use cases, typically endpoint, network, cloud, identity, email, etc. as well as a back end capable of performing threat detection, investigation, and response with that data. Native XDR vendors can be EDR vendors who are expanding their portfolio to include more sensors and back-end capabilities such as efficient advanced analytics, or they can be platform vendors which have a wide portfolio of security tools that they are trying to more tightly integrate to provide XDR-like functionalities.
+- What is an open XDR?
+  - Alternatively, open XDR vendors offer a solution that is predominantly focused on the back-end analytics and workflow engine. Leading open XDR vendors also add prescriptive content required across all the phases and the full lifecycle of threat detection, investigation and response (TDIR) to easily solve common SOC use cases out of the box. - Open XDRs need to integrate with all of an organization’s existing security and IT infrastructure, then correlate and analyze all relevant data, and finally automate and optimize TDIR workflows, making it easier for SOC teams to respond to incidents quicker. As security stacks have grown more complex and disjointed in organizations, open XDRs act as a single control plane across multiple products and vendors. This provides visibility and allows orchestration and automation of actions (similar to SIEM and SOAR functionality) so that SOC teams don’t have to run manual workflows across a myriad of tools.
+
+- Exabeam’s take on XDR
+  - We believe the open XDR approach best positions most security teams for success and reduces their cybersecurity risks. While the native approach may, in theory, offer the major pieces of a security program and the simplicity of a single vendor, we believe this will inevitably lead to vendor lock-in and a lack of depth and breadth of coverage for organizations. Security teams will find it difficult to get best-in-class capabilities across email, DLP, identity, cloud all from a single vendor.
+In addition, organizations selecting a native XDR may find it very difficult to add a security tool from another vendor that covers a new attack vector or more advanced threats. Because native XDRs are usually focused on their own portfolio, little to no capabilities and support exist to efficiently integrate with sensors from other infosec tools. The flexibility offered by an open XDR allows security teams to keep existing investments in best-of-breed security tools while allowing desired changes to their tech stack. Open XDRs are made to integrate with other products — so they can comprehensi 
+
+- XDR is a set of technologies that can help security teams perform more effective threat detection, as well as rapid investigation and response.
+- Unlike previous-generation security solutions, XDR is not limited to one security silo — it combines data from networks, endpoints, email, IoT devices, servers, cloud workloads, and identity systems. It combines data from all layers of the IT environment, and enriches them with threat intelligence, to detect sophisticated and evasive threats.
+- A primary value of XDR is that it provides prepackaged, automated threat detection, investigation and
+response (TDIR) for a variety of threats. XDR solutions are cloud delivered, suited for distributed,
+heterogeneous IT environments. They are turn-key solutions that immediately provide value and improve
+productivity for security teams.
+
+- XDR is typically made up of three major feature sets: front end, back end and content. The front end consists of the “sensors” that generate security telemetry data, like CASBs, EDRs, IAM, DLP solutions, and others. The back end ingests all the collected telemetry data, logs and context information, then conducts all the data correlation, advanced analytics, threat detection, investigation, tool orchestration, and response automation.
+- The third critical component of any successful XDR is content. XDRs should be able to offer a closed-loop
+solution that encompasses the entire security operations workflows of threats. XDRs are supposed to be
+turnkey solutions with immediate time to value and minimum/no configuration, regardless of the expertise
+level of the SOC — so instead of tuning, SOCs should be able to use XDRs to address immediate concerns
+from start to finish. By this, we mean focusing on one use case and expanding from thereafter each one is
+addressed. Without this capability, XDRs will not be able to fulfill their value prop: turn-key TDIR that works immediately, without customization.
+- Without prescriptive, prepackaged content that ties these pieces together around specific use cases, it’s
+impossible to achieve the value props of simplicity, automation, and successful outcomes that XDR promises.
+
+![ LINK: XDR Examples](./assets/xdr-examples.png)
+
+
+## Module 3 How Data Ingestion and Enrichment Works in AA <a name='module3'></a>
+
+
+
+
+
+
+
 
 <table>
    <thead>
