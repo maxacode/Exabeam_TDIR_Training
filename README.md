@@ -762,7 +762,7 @@ https://community.exabeam.com/s/article/Landing-Page-for-Tuning-Rules-in-Advance
 ![triggered-rules](./assets/triggered-rules-1.png)
 
 
-#### 4 Smart Timelines <a name='smart-timeline'></a>
+#### 4 Smart Timelines <a name='smart-timelines'></a>
 
 4. Navigate the Smart Timeline™ effectively and recall how it is assembled through the analytics engine.
 
