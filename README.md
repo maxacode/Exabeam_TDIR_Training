@@ -24,7 +24,7 @@
     1. [Zero Days](#zero-day)
     2. [Sessions](#sessions)
     3. [Histograms](#histogram)
-    4. [Smart Timelines](#4-smart-timelines)
+    4. [Smart Timelines](#smart-timelines)
     5. [Lab](#module3-lab)
     
   
