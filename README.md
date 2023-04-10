@@ -5,8 +5,8 @@
 
 1. [Exabeam TDIR for Security Analysts (EDU-2170)](#introduction1)
     1. [Slides](#slides)
-    2. [Sub paragraph](#subparagraph1)
-    3. [Sub paragraph](#subparagraph1)
+    2. [All Links](#alllinks)
+    3. [Key Takeaways](#keytakeaways)
     4. [Types of Attacks](#subparagraph4)
 
 2. [Search, Dashboards, and Correlation Rules - EDU-2201](#introduction2)
@@ -30,7 +30,8 @@ Purpose of the Course:
 - Click on Class currently Enrolled in 
 - All Slides/Labs will be there
 
-### Presentation Slides 
+## Slides <a name="slides"></a> 
+
 [Day 1 Slides](./assets/Day1-2170-Student-v4.pdf)
 
 [Day 2 Slides](./assets/Day2-2170-Student-v4.pdf)
@@ -38,7 +39,10 @@ Purpose of the Course:
 [Day 3 Slides](./assets/Day3-2170-Student-v4.pdf)
 
 
-## Links
+## Links <a name="alllinks"></a>
+
+
+[Library - Amazing Sources - Discover more about the Exabeam platform, learn about the latest in SecOps, and find resources to help mature your SOC. Browse by content type or explore our featured picks below.](https://www.exabeam.com/library/)
 
 [Customer Login](https://customer.exabeamtraining.com/)
 
@@ -54,32 +58,30 @@ Purpose of the Course:
 
 [Exabeam CTF](https://customer.exabeamtraining.com/exabeam-capture-the-flag)
 
+ 
+## Key Takeaways <a name="keytakeaways"></a>
 
-## Slides <a name="slides"></a>
+### Takeaway #1 - Adop a Use Case Methodology 
+![#1](./assets/keytakeaway-1.png)
 
+### Takeaway #2 - Known How Behavior Analytics Work
 
+![#2](./assets/keytakeaway-2.png)
+![#2](./assets/keytakeaway-2-2.png)
 
-![ ](./assets/)
-![ ](./assets/)
-![ ](./assets/)
-![ ](./assets/)
-![ ](./assets/)
-
-### Sub paragraph <a name="subparagraph1"></a>
-This is a sub paragraph, formatted in heading 3 style
-
-## Another paragraph <a name="paragraph2"></a>
-The second paragraph text
+### Key Takeaway #3: Utilize the Exabeam Security Operations Platform for Investigation and Response Workflows
 
 
-## Another paragraph <a name="paragraph2"></a>
-The second paragraph text
+![#3](./assets/keytakeaway-3.png)
+
+ 
 
 
-## Another paragraph <a name="paragraph4"></a>
+## Types of Attacks <a name="attacktypes"></a>
 
 - Insider Threat- An exisitng employee or contractor exploits thier access for malicoius purposes 
 - Lateral/Parallel Movement
+- External Threat - Credentials exploited by someone outside the organization for the purpose of data theft and/or sabotage
 
 
 <table>
