@@ -11,10 +11,10 @@
     4. [Types of Attacks](#subparagraph4)
 
 2. [Module 2: Threat Detection with Behavior Analytics](#threatdetection)
+    1. [How User Entity Behavioral Analytics (UEBA) Works](#ueba)
 
 
-
-# Search, Dashboards, and Correlation Rules - EDU-2201 
+33.  Search, Dashboards, and Correlation Rules - EDU-2201 
 
 ## Table of contents
 
@@ -154,7 +154,7 @@ events. Context and meaning are added to third party alerts and focuses analysts
 critical security decisions.
 
 
-### How User Entity Behavioral Analytics (UEBA) Works
+### How User Entity Behavioral Analytics (UEBA) Works <a name="ueba"></a>
 
 - UEBA solutions are based on a concept called baselining. They build profiles that model standard behavior for users, hosts, and devices (called entities) in an IT environment.
 
@@ -194,3 +194,6 @@ will not be able to tell if the abnormal behavior is good or bad, only that it d
       </tr>
    </tbody>
 </table>
+
+
+#  Search, Dashboards, and Correlation Rules - EDU-2201 
