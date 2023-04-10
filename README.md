@@ -814,4 +814,5 @@ https://community.exabeam.com/s/article/Landing-Page-for-Tuning-Rules-in-Advance
 </table>
 
 
-#  Search, Dashboards, and Correlation Rules - EDU-2201 
+#  Search, Dashboards, and Correlation Rules - EDU-2201 3
+
