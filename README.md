@@ -25,8 +25,14 @@
     2. [Sessions](#sessions)
     3. [Histograms](#histogram)
     4. [Smart Timelines](#smart-timelines)
-    5. [Lab](#module3-lab)
-    
+    5. [Lab](#module4-lab)
+   
+5. [Module 5: Threat Hunting with AA](#module5)
+    1. [MITRE ATT&CK](#MITRE)
+    2. [Threat Hunter](#Threat-Hunter)
+    3. [Data Insights](#Data-Insights)
+    4. [Watchlists](#watchlists)
+    5. [Lab](#module5-lab) 
   
 
 # Introduction Data Lake for Security Analysts <a name="introduction1"></a>
@@ -767,6 +773,7 @@ https://community.exabeam.com/s/article/Landing-Page-for-Tuning-Rules-in-Advance
 4. Navigate the Smart Timeline™ effectively and recall how it is assembled through the analytics engine.
 
 
+
 ![triggered-rules](./assets/smart-timeline.png)
 
 
@@ -784,9 +791,193 @@ https://community.exabeam.com/s/article/Landing-Page-for-Tuning-Rules-in-Advance
 
 
 
-#### Module 3 Labs <a name='module3-lab'></a>
+#### Module 4 Labs <a name='module4-lab'></a>
 
 
+## Module 5: Threat Hunting with AA <a name='module5'></a>
+ 
+ 
+[LINK: Data Exfil Use Case](https://community.exabeam.com/s/article/Data-Exfiltration-Use-Case-Chapter-5-Investigate)
+
+
+  
+#### MITRE ATT&CK <a name='MITRE'></a>
+
+1. Navigate the MITRE ATT&CK® Framework and extract information useful to threat hunting
+
+![Mitre](./assets/mitre.png)
+
+MITRE is an organization 
+
+ATT&CK is a free, open, globally accessible knowledge base of adversary behaviors, an encyclopedia of real-
+world observations of what adversaries have been seen to do
+
+Techniques: 266 as of Aug 2019” (source: https://medium.com/mitre-attack/automating-mapping-to-attack-
+tram-1bb1b44bda76)
+
+Coming in 2020 (source: https://medium.com/mitre-attack/2020-attack-roadmap-4820d30b38ba)
+
+Sub-techniques will be added. Sub-techniques will help fix the unevenness across the knowledge base as 
+some techniques are broad in definition and some specific
+
+#### Examples:
+
+- Lateral movement: Remote Services will be broken out into Remote Desktop, SMB/Windows Admin 
+Shares, Distributed Component Object Model, etc.
+
+- Credential Access: Brute Force will be broken out into Password Guessing, Password Cracking, 
+Password Spraying, Credential Stuffing
+
+- Adversary behavior model for network infrastructure devices including routers, switches and firewalls
+Threat Report ATT&CK Mapper (TRAM) (beta released Dec 2019)
+
+- Provides a streamlined approach for analyzing reports and extracting ATT&CK techniques
+Goal: reduce analyst fatigue, increase ATT&CK coverage, improve accuracy of threat intelligence 
+mappings
+
+#### Map ATT&CK to NIST 800.53 v4
+
+Goal: better support efforts to identify controls that mitigate relevant threats and identify capability gap
+
+More Information
+
+https://www.mitre.org/capabilities/cybersecurity/overview/cybersecurity-blog/the-philosophy-of-attck
+
+https://www.exabeam.com/information-security/what-is-mitre-attck-an-explainer
+
+
+MITRE ATT&CK® is a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations of cyberattacks.
+
+•Tactics – the whyof an attack, e.g., Privilege Escalation, Defense Evasion
+
+•Techniques – the howof an attack, e.g., Access Token Manipulation, Clear Command History
+
+•Common Knowledge – the documented use of tactics and techniques by adversaries
+
+•Matrices – the visual organization of Tactics and Techniques for Enterprise, Mobile et al
+
+•Groups – sets of related intrusion activity that are tracked by a common name in the security community,  e.g., APT3 (Gothic Panda from China)
+
+More Information
+
+https://www.exabeam.com/wp-content/uploads/2020/01/Exabeam_Whitepaper_MitreAttack.pdf
+
+https://www.exabeam.com/information-security/what-is-mitre-attck-an-explainer/
+
+
+![Mitre](./assets/mitre.png)
+![Mitre](./assets/mitre1.png)
+![Mitre](./assets/mitre2.png)
+![Mitre](./assets/mitre3.png)
+![Mitre](./assets/mitre4.png)
+
+
+
+#### Threat Hunter <a name='Threat-Hunter'></a>
+
+ 2. Use Threat Hunter to unearth hidden threats
+
+ 
+https://www.exabeam.com/siem/how-to-use-exabeam-for-threat-hunting/
+ 
+
+Do you have a proactive threat hunting program, and how does it work?
+
+ Threat hunting activities include:
+
+•Hunting for insider threats or outside attackers – Cyber threat hunters can detect threats posed by insiders, 
+like an employee, or outsiders, like a criminal organization.
+
+•Proactively hunting for known adversaries – A known attacker is one who is listed in threat intelligence 
+services, or whose code pattern is on the deny list of known malicious programs.
+
+•Searching for hidden threats to prevent the attack from happening – Threat hunters analyze the computing 
+environment by using constant monitoring. Using behavioral analysis, they can detect anomalies which could 
+indicate a threat.
+
+•Executing the incident response plan – When they detect a threat, hunters gather as much information as 
+possible before executing the incident response plan to neutralize it. This is used to update the response plan 
+and prevent similar attacks.
+
+Source
+
+https://www.exabeam.com/security-operations-center/threat-hunting/
+
+![th](./assets/threathunting.png)
+
+![th](./assets/th1.png)
+
+
+Different types of attacks leave different types of impressions in the logs to look for.  When searching for 
+certain types of attack symptoms there is guidance on the Exabeam community pages
+
+Example: Privileged Activity has the “recipe” for 13 different examples of privileged activity risk behavior that 
+might trigger an investigation, even if the overall risk score hasn’t exceeded 90
+ 
+
+#### Threat Hunter Search results can change over time. To capture the results for record-keeping export the sessions list using the save featur 
+
+![th](./assets/th2.png)
+
+Source
+
+https://www.exabeam.com/siem/how-to-use-exabeam-for-threat-hunting/
+
+
+#### The Exabeam Search Library is the third tab on the left side of Threat Hunter. Exabeam provides powerful threat hunter searches out of the box to help with common complicated search criteria. 
+
+![th](./assets/th3.png)
+
+
+They are read-only but can be copied from the item menu if you would like to modify it. 
+
+Exabeam ships with the following preconfigured searches:
+
+•Notable Sessions with Security Alerts
+
+•Notable Sessions with Account Management
+
+•Notable VPN Sessions
+
+•Notable Sessions Containing Data Ex-filtration
+
+•Notable Sessions Containing Executive Assets
+
+•Notable Failed Logons
+
+Additionally saved public and private saved searches can be executed as well
+
+Source
+
+https://www.exabeam.com/siem/how-to-use-exabeam-for-threat-hunting/
+
+
+
+##### Use ATT&CK Navigator to map tactics and techniques used by an adversary, then hunt for those in Advanced Analytics.
+
+The navigator is helpful because it can help you understand the adversary and their likely threats. This has the 
+following advantages:
+
+•Use ATT&CK to save time in developing a hypothesis to test
+
+•Hunt for a pattern of behavior rather than artifacts; much more efficient
+
+Source
+
+https://mitre-attack.github.io/attack-navigator/enterprise/
+
+
+
+#### Data Insights <a name='Data-Insights'></a>
+
+3. Use Data Insights to identify trends and threats
+
+#### Watchlists <a name='watchlists'></a>
+
+4. Create and utilize watchlists to monitor risky users and entities
+
+
+#### Labs <a name='module5-lab'></a>
 
 
 
