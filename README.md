@@ -34,6 +34,13 @@
     4. [Watchlists](#watchlists)
     5. [Lab](#module5-lab) 
   
+6. [Module 6: Investigate and Respond with Case Manager and Incident Responder](#module6)
+    1. [Case Manager checklist](#CaseManagerchecklist)
+    2. [Turnkey Playbook](#turnkeyplaybook)
+
+
+
+
 
 # Introduction Data Lake for Security Analysts <a name="introduction1"></a>
 
@@ -921,7 +928,7 @@ might trigger an investigation, even if the overall risk score hasn’t exceeded
 
 Source
 
-https://www.exabeam.com/siem/how-to-use-exabeam-for-threat-hunting/
+https://www.exabeam.com/siem/how-to-use-exabeam-for-threat-hunting/e
 
 
 #### The Exabeam Search Library is the third tab on the left side of Threat Hunter. Exabeam provides powerful threat hunter searches out of the box to help with common complicated search criteria. 
@@ -972,12 +979,333 @@ https://mitre-attack.github.io/attack-navigator/enterprise/
 
 3. Use Data Insights to identify trends and threats
 
+Data Insights is revealing the models used to collect data about behavior so that rules can be run against
+them.
+
+Each model has its own name and can be searched for using natural language components as well
+The Grouping Feature Value (GFV) describes how data is broken out. If the model is a per asset model, each
+asset will be its own GFV
+
+![Data Insights](./assets/di1.png)
+
+![Data Insights](./assets/di2.png)
+
+![Data Insights](./assets/di3.png)
+
+![Data Insights](./assets/di4.png)
+
+
+![Data Insights](./assets/mitre5.png)
+
 #### Watchlists <a name='watchlists'></a>
 
 4. Create and utilize watchlists to monitor risky users and entities
 
+''' If we mmonitor our toothbrushes
+and diamonds with the same [level
+of] zeal we will lose fewer
+toothbrushes and more diamonds" - Former natilna security adbisor McGeorge Bundy'''
+
+Make sure you are safeguarding the most valuable assets/individuals in your environment.
+
+Reference
+
+https://www.mitre.org/publications/systems-engineering-guide/enterprise-engineering/systemsengineering-for-mission-assurance/crown-jewels-analysis
+
+
+
+#### Automatic detection is done in Advanced Analytics by finding notable users who have been identified to have
+had risky behavior and then incidents are created in case manager for analyst workflow.
+
+![Watchlist](./assets/watch1.png)
+
+
+#### Notables in Advanced Analytics are built in watchlists that automatically populate when a predefined
+threshold risk score is reached (default of >=90 risk score). 
+
+They cannot be added to or deleted from.
+The “watchlist” however is a fundamental part of the Advanced Analytics dashboard for at-a-glance alerting
+based on UEBA risk score alerts. They are created by analysts to proactively monitor high-risk and/or highvalue users and assets such as service accounts and executive users.
+They can also be used for policy and compliance situations and other unique use cases.
+More Information
+
+https://www.exabeam.com/ueba/financial-institutions-and-ueba-fdic-vacation-policy-use-case/
+
+![Watchlist](./assets/watch2.png)
+
+### Fast Fact: Executives are 12x more likely to be targeted in a security incident
+
+#### Account Lockouts is a list of users who have been locked out of their account within the timeframe selected. Clicking the caron at the top right activates a drop-down list for selecting the timeframe for that list. The account lockouts that Exabeam has deemed risky are at the top.
+
+![Watchlist](./assets/watch3.png)
+
+![Watchlist](./assets/watch4.png)
+
+![Watchlist](./assets/watch5.png)
+
+
 
 #### Labs <a name='module5-lab'></a>
+
+
+
+
+
+
+
+## Module 6: Investigate and Respond with Case Manager and Incident Responder <a name='module6'></a>
+
+## Case Manager checklist <a name='CaseManagerchecklist'></a>
+
+1. Define a security incident and recall the function of the Case Manager checklist in the Exabeam analyst workflow
+
+#### According to NIST- Events and Incidents:
+
+An event is any observable occurrence in a system or network. Events include a user connecting to a file
+share, a server receiving a request for a web page, a user sending email, and a firewall blocking a connection
+
+attempt. Adverse events are events with a negative consequence, such as system crashes, packet floods,
+unauthorized use of system privileges, unauthorized access to sensitive data, and execution of malware that
+destroys data. This guide addresses only adverse events that are computer security related, not those caused
+
+by natural disasters, power failures, etc.
+A computer security incident is a violation or imminent threat or violation of computer security policies,
+acceptable use policies, or standard security practices. Examples of incidents are:
+
+• An attacker commands a botnet to send high volumes of connection requests to a web server, causing it
+to crash.
+
+• Users are tricked into opening a “quarterly report” sent via email that is actually malware; running the
+tool has infected their computers and established connections with an external host.
+
+• An attacker obtains sensitive data and threatens that the details will be released publicly if the
+organization does not pay a designated sum of money.
+
+• A user provides or exposes sensitive information to others through peer-to-peer file sharing services.
+
+Source
+
+https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf
+
+#### Incident Response
+
+Incident response is an approach to review and respond to a cyber security breach or attack utilizing a
+planned process or methodology.
+
+Effective incident response teams utilize procedures and technology, such as automated playbooks, to
+respond quickly and adequately to cyber security events, limiting the damage done by attackers.
+
+Source
+
+https://www.exabeam.com/incident-response/
+
+https://www.exabeam.com/incident-response/incident-response-plan/
+
+Attacks frequently compromise personal and business data, and it is critical to respond quickly and effectively when security breaches occur. The concept of computer security incident response has become widely accepted and implemented. One of the benefits of having an incident response capability is that it supports responding to incidents systematically (i.e., following a consistent incident handling methodology) so that the appropriate actions are taken. Incident response helps personnel to minimize loss or theft of information and disruption of services caused by incidents. Another benefit of incident response is the ability to use information gained during incident handling to better prepare for handling future incidents and to provide stronger monitoring for systems and data. An incident response capability also helps with dealing properly with legal issues that may arise during incidents.
+
+Source
+
+https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf
+
+![Watchlist](./assets/irp.png)
+
+![Watchlist](./assets/analystquestions.png)
+
+### Investigation and Resolution of Detected and Triaged threats is a process that requires many steps that need to be accounted for consistently, and in some cases would be better served to be performed in an automated way.
+
+Exabeam provides tools that help analysts to do exactly that in a way that leverages the information found in user profiles and the Smart Timeline.
+
+Exabeam Case Manager is a fully customizable case management solution that includes ticketing, messaging,
+and KPI dashboards to organize, track, and streamline your investigation
+Case Manager includes use-case specific turnkey playbooks for automation
+You can also add Incident Responder to Case Manager with a separate license to extend your custom
+playbook capabilities.
+
+Advanced Analytics and Entity Analytics support resolving security concerns regarding users or entities with watchlists and search functionality
+
+![Watchlist](./assets/incident.png)
+
+
+Incidents function as tickets, and at any one time only one Advanced Analytics User can be assigned the
+primary responsibility to resolve that ticket.
+That person is the Assignee of the incident, and they will see their assignments on the home page of
+Advanced Analytics under “My Incidents”
+Assigning a user to a queue requires the appropriate permission. A user can only be assigned an incident if
+they are also a member of the queue associated with that incident. 
+
+### In addition to case queues and assignments, Case Manager access control restrictions have the potential to
+impact an analyst's interactions with the tool. Four controls in particular are worth noting:
+
+• Incidents can be restricted to one or more roles and/or users
+
+• Only members on the restricted list of roles and users can be assigned to a task
+
+• Fields or tasks identified as "required" must completed before an incident can be closed
+
+• Closed incidents cannot be modified in any way. The incident status must be
+
+The upcoming instructor demonstration will show these Case Manager controls in action.
+References
+
+Case Manager Release Notes https://docs.exabeam.com/en/cloud-delivered-case-manager/all/casemanager/171447-case-manager-release-notes.html
+
+Manually Create an Incident: https://docs.exabeam.com/en/cloud-delivered-case-manager/all/casemanager/171133-investigate-a-security-incident.html#UUID-9a315bfc-d372-5bcb-4352-eebef502aa19
+
+Edit an Incident: https://docs.exabeam.com/en/cloud-delivered-case-manager/all/case-manager/171133-
+investigate-a-security-incident.html#UUID-be6abebd-2100-2c70-2ba1-ff7c465eba2a
+
+#### Incident type describes The nature of an incident (e.g., malware, phishing attempt, data leakage, departed employee).
+
+Based on the incident type, Incident Responder displays certain incident fields and tasks.
+
+In other words, Incident Types are categorizations of incidents, based on attack vector or case context.
+Incident types can be customized, or new incident types can be created by Case Manager administrators to
+allow for specific fields and checklists that are dialed into an organization’s needs.
+
+Incident field is an attribute of an incident, like its description or the time it was created.
+d
+Source
+
+Advanced Analytics User Guide
+In other words, Incident Fields are both unique information to the incident type as well as common
+metadata for all incidents.
+
+Generic Field Example: Status, Priority, Description
+Malware Incident Type Field Example: Malware URL
+
+
+2. Do the following:
+    1. Recall how incidents are created
+
+        An incident can be created manually, with or without initially referencing a user profile from
+        Advanced Analytics.
+
+        Many incidents are automatically created, such as when an Advanced Analytics user has a risk score
+        above 90 and becomes notable or an alert is escalated in Alert Triage.
+
+        A designated phishing email box can be used to trigger the creation of phishing incidents
+        If there is a log source not being fed to Advanced Analytics that you would like to use to trigger
+        incidents Case Manager can fetch those logs from the source directly using API calls or that SIEM can
+        forward logs directly to case manager using Syslog
+
+       ### Case Manager Email Ingest creates incidents from potential phishing emails. It ingests suspicious emails from
+        a designated phishing mailbox, parses relevant fields, creates an incident, then deletes the email from the
+        inbox.
+
+
+      ###  The first step of Alert Triage, usually performed by Tier 1 analysts, determines if an alert poses a risk to their organization. 
+      
+      The first challenge is in opening the various alert sources and reviewing alerts. This can be done more quickly if a SIEM is used rather than opening each product’s interface individually. If an alert does
+        signify risk, it must be escalated to the incident response team for further review. If it is not determined to
+        be a risk, then the alert can be dismissed and not elevated to a Case Manager Incident.
+      
+        Alert Triage on the Exabeam Cloud Platform
+      
+        • Provides a unified view of third-party and Exabeam Data Lake-triggered security alerts.
+      
+        • Centralizes the alert triage process and organizes an analyst’s efforts, so they can review 
+        alerts faster.
+        
+        • Provides full visibility into all the alerts that security tools have triggered, minimizes the likelihood that
+        an alert is missed or overlooked, reducing the chance that a missed alert results in a breach.
+        
+        • When an alert is escalated a Case Manager Incident is automatically created with relevant information
+        injected into the incident
+        
+        More Information
+        
+        https://www.exabeam.com/information-security/introducing-exabeam-alert-triage/
+
+
+        ![case](./assets/case.png)
+
+        ![case](./assets/case1.png)
+
+        ![case](./assets/case2.png)
+
+                Student Notes
+        On average, organizations deploy 30-50 security tools and receive 11,000 alerts a day. As the first step of the alert
+        triage process, a security analyst must prioritize the alerts and identify the alerts that pose the largest threat to the
+        organization. Many alerts classified as high or critical by other security vendors' solutions end up being false positives.
+        On the other hand, lower-ranked alerts that represent a significant threat may fall through the cracks. Manual alert
+        prioritization is time consuming, often inaccurate, and inefficient. Analysts struggle to understand which alerts to
+        prioritize across vendors with varying and subjective severity rankings. And when the volume of alerts is high,
+        prioritization becomes even more time-consuming, limiting the analyst's ability to quickly triage high-priority alerts
+        and delaying the start time of important investigations.
+        Exabeam automates the prioritization of third-party security alerts and Data Lake alerts, the first step in triaging.
+
+        Security analysts can filter their view to display alerts by priority. High priority alerts pose the largest threat to your
+        organization. Low priority alerts are threats that have the potential to pose a threat, and observational alerts are alerts
+        that Exabeam has classified as repetitive, or noisy. Classifying alerts as high-priority provides a starting point for the analyst to begin the triage process, focusing on the alerts of highest risk to the organizaƟon.
+
+        The Exabeam risk engine use machine learning across mulƟple signals to categorize the alert, such as
+
+        • Rarity of the combination of alert name and type
+
+        • Rarity of the combination of the vendor (source) and alert severity
+
+        • First time the alert name and type has been observed for the organization, user, or asset in the last 30
+        days Also, analyst feedback helps the ranking algorithm understand if surfacing the alert as high or low priority was correct.
+
+        The Exabeam risk engine will then use this feedback to improve the ranking algorithm.
+        References
+
+        https://www.cio.com/article/189493/how-can-cisos-tackle-the-soc-talentshortage.
+        
+        html#:~:text=Embracing%20Automation%20and%20Intelligence,them%20on%20a%20given%20day.
+
+
+    2. Edit an incident in Case Manager
+
+    ![artifact](./assets/artifact.png)
+
+    ![artifact](./assets/case4.png)
+
+    ![artifact](./assets/case5.png)
+
+
+    ![artifact](./assets/case6.png)
+
+    ![artifact](./assets/case7.png)
+
+    ![artifact](./assets/ir.png)
+
+
+## Turnkey Playbook <a name='turnkeyplaybook '></a>
+
+
+3. Execute a turnkey playbook in Incident Responder
+
+    ![artifact](./assets/pl1.png)
+    ![artifact](./assets/pl2.png)
+    ![artifact](./assets/pl3.png)
+    ![artifact](./assets/pl4.png)
+    ![artifact](./assets/pl5.png)
+    ![artifact](./assets/pl6.png)
+
+
+
+    ![artifact](./assets/incident.png)
+    ![artifact](./assets/incident1.png)
+
+    ![artifact](./assets/incident2.png)
+
+
+4. Recall where to start an investigation and how to execute the
+steps in a Case Manager checklist to identify, classify, and
+respond to an incident
+
+
+5. Perform the steps of the analyst workflow from start to
+completion
+
+
+
+#  Search, Dashboards, and Correlation Rules - EDU-2201 3
+
+
+
+
 
 
 
@@ -1003,7 +1331,3 @@ https://mitre-attack.github.io/attack-navigator/enterprise/
       </tr>
    </tbody>
 </table>
-
-
-#  Search, Dashboards, and Correlation Rules - EDU-2201 3
-
