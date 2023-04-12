@@ -38,8 +38,16 @@
     1. [Case Manager checklist](#CaseManagerchecklist)
     2. [Turnkey Playbook](#turnkeyplaybook)
 
+  
+7. [Module 7: External Threats](#externalthreats)
+    1. [Identify External Threat Activity](#externalthreats2)
+    2. [Investigate and Respond to External Threat Activity](#externalthreats3)
 
 
+ 
+
+
+### Investigate and Respond to External Threat Activity <a name='externalthreats3'></a>
 
 
 # Introduction Data Lake for Security Analysts <a name="introduction1"></a>
@@ -1055,7 +1063,7 @@ https://www.exabeam.com/ueba/financial-institutions-and-ueba-fdic-vacation-polic
 
 ## Module 6: Investigate and Respond with Case Manager and Incident Responder <a name='module6'></a>
 
-## Case Manager checklist <a name='CaseManagerchecklist'></a>
+### Case Manager checklist <a name='CaseManagerchecklist'></a>
 
 1. Define a security incident and recall the function of the Case Manager checklist in the Exabeam analyst workflow
 
@@ -1290,15 +1298,47 @@ Malware Incident Type Field Example: Malware URL
 
     ![artifact](./assets/incident2.png)
 
-
-4. Recall where to start an investigation and how to execute the
-steps in a Case Manager checklist to identify, classify, and
-respond to an incident
+ 
 
 
-5. Perform the steps of the analyst workflow from start to
-completion
+## Module 7: External Threats <a name='externalthreats'></a>
 
+### Identify External Threat Activity <a name='externalthreats2'></a>
+
+
+1. Recall with general familiarity the principles of the
+Exabeam Use Case methodology
+
+
+
+https://github.com/ExabeamLabs/Content-Doc/blob/master/Exabeam%20Use%20Cases.md
+
+
+2. Describe and Identify External Threat Activity
+
+![externalthreats](./assets/ret1.png)
+![externalthreats](./assets/ret2.png)
+![externalthreats](./assets/ret3.png)
+![externalthreats](./assets/ret4.png)
+![externalthreats](./assets/ret5.png)
+![externalthreats](./assets/ret6.png)
+![externalthreats](./assets/ret7.png)
+![externalthreats](./assets/ret8.png)
+![externalthreats](./assets/ret9.png)
+![externalthreats](./assets/ret10.png)
+![externalthreats](./assets/ret11.png)
+![externalthreats](./assets/ret12.png)
+![externalthreats](./assets/ret13.png)
+![externalthreats](./assets/ret14.png)
+
+### Investigate and Respond to External Threat Activity <a name='externalthreats3'></a>
+
+
+3. Investigate and Respond to External Threat Activity
+
+![externalthreats](./assets/ret15.png)
+![externalthreats](./assets/ret16.png)
+![externalthreats](./assets/ret17.png)
 
 
 #  Search, Dashboards, and Correlation Rules - EDU-2201 3
