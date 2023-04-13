@@ -4,6 +4,8 @@
 
 ## Table of contents
 
+[Action Items](actionitems)
+
 1. [Introduction for Advanced Analytics](#introduction1)
     1. [Slides](#slides)
     2. [All Links](#alllinks)
@@ -48,6 +50,27 @@
     2. [Investigate and Respond to Compromised Insider Activity](#module82)
 
  
+# Action Items <a name='actionitems'></a>
+
+1. Setup watchlists for users in these categories:
+    1. PIP - Performance improvement Plan
+    2. Layoffs
+
+2. Exabeam Playbooks
+    1. Activity from other countries
+    2. Malware activity
+    3. Compromised Account
+    4. Insider Threat
+
+3. Automation's
+    1. Threat Hunting queries
+
+4. Dashboards for Metrics & Improvements
+    1. Mean time to Acknowledge
+    2. Mean time to Close
+    3. Resolution Types
+
+
 
 # Introduction Data Lake for Security Analysts <a name="introduction1"></a>
 
