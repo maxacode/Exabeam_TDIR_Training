@@ -39,16 +39,15 @@
     2. [Turnkey Playbook](#turnkeyplaybook)
 
   
-7. [Module 7: External Threats](#externalthreats)
+7. [Module 7: External Threats](#module7)
     1. [Identify External Threat Activity](#externalthreats2)
     2. [Investigate and Respond to External Threat Activity](#externalthreats3)
 
+8. [Module 8:  Compromised Insiders](module8)
+    1. [Describe and Identify Compromised Insider Activity](#module81)
+    2. [Investigate and Respond to Compromised Insider Activity](#module82)
 
  
-
-
-### Investigate and Respond to External Threat Activity <a name='externalthreats3'></a>
-
 
 # Introduction Data Lake for Security Analysts <a name="introduction1"></a>
 
@@ -1340,6 +1339,131 @@ https://github.com/ExabeamLabs/Content-Doc/blob/master/Exabeam%20Use%20Cases.md
 ![externalthreats](./assets/ret16.png)
 ![externalthreats](./assets/ret17.png)
 
+
+
+## Module 8: Compromised Insiders <a name='module8'></a>
+
+### Describe and Identify Compromised Insider Activity <a name='module81'></a>
+
+1. Describe and Identify Compromised Insider Activity
+Student Notes
+Lateral Movement use case
+According to the Carbon Black Global Threat Report from 2019, nearly 60% of external attacks involve lateral
+movement. But what is lateral movement?
+Lateral movement is a term that refers to techniques cyber attackers use to progressively move through a
+network, searching for targeted key data and assets. Adversaries might install their own remote access tools
+to accomplish Lateral Movement or use legitimate credentials with native network and operating system
+tools, aka, “living off the land,” which may be stealthier. Legacy SIEMs will fire an alert based upon a
+correlation rule (static rule) for each event, but without context, the system, as well as the analyst, does not
+know to “tie them together”. This is what leads to inconsistent and incomplete responses and can result in a
+situation where there is no containment or response, but rather a metric being met that shows two closed
+attacks. In a day and age of metric-driven “results” it appears to be a win-win but in reality, it’s truly a false
+sense of security because a threat is not contained and remains present in your organization.
+Security teams need smart, data-enriched timelines with contextual insights to surface attacks that involve
+lateral movement. This is where machine learning shines within the Exabeam Advanced Analytics platform.
+Additional resources supporting the lateral movement use case in the Exabeam SOC platform include the
+following:
+
+• Stateful timeline sessions map IP:Host:User, providing complete east-to-west visibility within the
+network perimeter despite changes in devices, credentials, or IP addresses.
+
+• Pass-the-Hash and Golden Ticket rules
+
+• Easy identification of account switch activity
+• Entity Analytics models asset behavioral changes
+
+Privilege Escalation use case
+
+15
+Privilege escalation can involve an attacker elevating their access either by increasing the level of privileges
+associated with an already compromised account (vertical escalation) or by switching accounts to gain access to
+a user with greater privileges (horizontal escalation). Horizontal escalation overlaps with the Lateral Movement
+use case discussed previously and can be detected by Exabeam through account switching behaviors, among
+other detection techniques. Exabeam detects vertical privilege escalation by identifying attackers who are
+bypassing access controls, exploiting access control vulnerabilities, or modifying permissions in order to elevate
+the privileges of an already compromised user. Note that for all use cases, Exabeam records the complete CLI
+command when the command line is used.
+Privileged Activity use case
+The Ponemon Institute states that 14% of incidents involve the abuse of privileged users‘ credentials and cost
+organizations an average of $2.79 million annually.
+In the Exabeam SOC platform, privileged accounts are identified from contextual data, as discussed earlier.
+Privilege access abuse represents a greater risk to an organization's data security as privileged access can often
+lead to exploitation or damage to critical business entities. The Exabeam SOC platform also includes integrated
+SOAR capabilities in order to automatically terminate user sessions and disrupt a potential attack.
+
+Account Manipulation use case
+The Account Manipulation use case identifies users that are performing account management activity outside
+of their typical behavior patterns. This could indicate threats such as a user has been compromised and the bad
+actor is attempting to elevate access by modifying group privileges. Or a bad actor may also add and remove a
+temporary user in order to shield their true identity while performing a malicious activity such as system
+reconnaissance, or accessing, hoarding, or exfiltrating data. Abnormal account management activity may not be
+enough to identify if a bad actor has compromised a user, but paired with contextual clues, analysts can start to
+paint a picture of why this user's behavior has changed.
+
+Data Exfiltration use case
+Data Exfiltration is often the ultimate goal of a compromised insider attack, whether for the data itself or to
+monetize the theft through threat of doxing as is done in many ransomware attacks. Bad actors will often
+compress and/or encrypt the data they intend to exfiltrate, and they frequently use command and control or
+alternate network protocol channels, sometimes in small batches, to move the data outside the organization’s
+perimeter. Exabeam has rules to detect these behaviors and many more.
+Exabeam detects data exfiltration by analyzing all incoming DLP alerts and quantifying the level of risk.
+Furthermore, using behavior profiling techniques, Exabeam also detects data exfiltration by baselining normal
+user activity and monitoring for abnormal usage patterns. We then automatically stitch together the DLP alerts
+and our own data exfiltration alerts with authentication, access, and contextual data sources into a user-centric
+timeline to paint a full picture of user activity.
+Analysts can leverage user and asset contextual data in conjunction with the abnormal activity to determine if
+the user is acting with malicious intent or if they have been compromised by an external bad actor. Finally, they
+are provided with lists of notable accounts, user activity timelines, and customized response plans to support
+data exfiltration investigations.
+
+Evasion use case
+After initial compromise, an adversary seeks to avoid detection to establish persistence within the network. As
+a result, hackers will leverage a host of tactics to remain undetected. By hiding their activity and evading the
+15
+organization's detection mechanisms, they are awarded enough time to carry out their true objective, such as
+deploying malware for exfiltrating data, encrypting files for ransomware, or exploiting resources for cryptomining.
+
+A common evasion technique is audit log clearing and/or tampering. So what do we do if the logs on a system
+have been cleared? The data used to populate timelines in Exabeam Advanced Analytics provide a historical
+view of user activity and events prior to any tampering or clearing of the audit log that may have occurred.
+
+Groups such as APT29 make use of the TOR network for, among other things, evading an organization’s
+defenses while exfiltrating data. Potentially dangerous IPs are flagged using Exabeam's is_tor_proxy and
+is_tor_ip context table enrichment.
+
+Exabeam contributed sub-technique T1553.006: Code Signing Policy Modification to the MITRE ATT&CK
+framework. The above command line is one example of how a system’s code signing policy might be modified,
+possibly for malicious purposes.
+
+References
+
+https://github.com/ExabeamLabs/Content-Doc/tree/master/UseCases
+
+https://www.exabeam.com/ueba/detecting-lateral-movement-and-credential-switching-human-vs-machine/
+
+https://attack.mitre.org/tactics/TA0008/
+
+https://www.exabeam.com/information-security/lateral-movements/
+
+https://www.exabeam.com/information-security/protecting-your-network-from-lateral-movement/
+
+https://www.exabeam.com/wp-content/uploads/2016/06/Exabeam_BBCN_Case_Study.pdf
+
+https://www.exclusive-networks.com/uk/wp-content/uploads/sites/28/2020/12/
+
+UK-VR-Proofpoint-Report2020-Cost-of-Insider-Threats.pdf
+
+![inside](./assets/inside1.png)
+![inside](./assets/inside2.png)
+
+![inside](./assets/inside3.png)
+
+![inside](./assets/inside4.png)
+
+
+### Investigate and Respond to Compromised Insider Activity <a name='module82'></a>
+
+2. Investigate and Respond to Compromised Insider Activity
 
 #  Search, Dashboards, and Correlation Rules - EDU-2201 3
 
