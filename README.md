@@ -1491,6 +1491,14 @@ UK-VR-Proofpoint-Report2020-Cost-of-Insider-Threats.pdf
 #  Search, Dashboards, and Correlation Rules - EDU-2201 3
 
 
+## Labs
+lab URL -  
+ https://edufusion1.use1.exabeam.cloud
+
+Login: student05@exalabs.cloud
+Password: Ex@beam6
+
+
 
 
 
@@ -1518,3 +1526,7 @@ UK-VR-Proofpoint-Report2020-Cost-of-Insider-Threats.pdf
       </tr>
    </tbody>
 </table>
+
+
+
+
